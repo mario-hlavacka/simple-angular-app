@@ -1,1 +1,16 @@
-<p>donate-form works!</p>
+<div class="donate-element">
+    <div class="donate-form">
+        <div>
+            <div class="step-indicator" [class.active]="(currentStep === 1)"></div>
+            <div class="step-indicator" [class.active]="(currentStep === 2)"></div>
+            <div class="step-indicator" [class.active]="(currentStep === 3)"></div>
+        </div>
+        <app-donate-form-step1 [contribution]="contribution" (nextStep)="nextStep($event)" (wholeFoundationContributionSet)="wholeFoundationContributionSet($event)" *ngIf="currentStep === 1" />
+        <app-donate-form-step2 [contribution]="contribution" (previousStep)="previousStep($event)" (nextStep)="nextStep($event)" *ngIf="currentStep === 2" />
+        <app-donate-form-step3 [contribution]="contribution" [wholeFoundationContribution]="wholeFoundationContribution" (previousStep)="previousStep($event)" (submitForm)="submitForm()" *ngIf="currentStep === 3" />
+    </div>
+
+    <div class="donate-image">
+        <img src="dog.svg" alt="Donation image" />
+    </div>
+</div>

@@ -1,0 +1,47 @@
+.footer {
+    padding: 100px 0 70px;
+    width: 55%;
+    border-top: 3px solid #DDDDDD;
+    margin: 150px auto;
+}
+
+.footer div {
+    margin-right: 120px;
+}
+
+.footer-links {
+    width: 14%;
+    display: inline-block;
+    float: left;
+}
+
+.last {
+    margin-right: 0 !important;
+}
+
+.footer-links h3 {
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    width: 30%;
+    display: inline-block;
+    float: left;
+}
+
+.footer-logo img {
+    float: left;
+}
+
+.footer-logo h1 {
+    display: inline;
+    font-size: 2.2em;
+    float: left;
+    margin: 3px 10px !important;
+}
+
+a {
+    font-size: 1.2em;
+    padding: 8px 0;
+    display: block;
+}

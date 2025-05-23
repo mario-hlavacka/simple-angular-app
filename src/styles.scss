@@ -1,1 +1,201 @@
 /* You can add global styles to this file, and also import other style files */
+
+.input-field {
+    padding: 15px 25px;
+    border:0.1em solid #DFDFDF;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-family: arial;
+    width: 540px;
+}
+
+.input-field:has(input:focus) {
+    border-color: #CD8B65;
+}
+
+.input-field:has(select:focus) {
+    border-color: #CD8B65;
+}
+
+.input-field label {
+    display: inline-block;
+    position:relative;
+    background-color:white;
+    font-weight: bold;
+    width: 100%;
+}
+
+.input-field input {
+    border:none;
+    width: 100%;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+.input-field select {
+    border:none;
+    background-color: white;
+    width: 100%;
+}
+
+.buttons {
+    width: 100%;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+button {
+    padding: 25px;
+    border-radius: 40px;
+    border-width: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-back {
+    background-color: #F3E2D9;
+    color: #2F2F2F;
+    float: left;
+}
+
+.btn-continue {
+    background: linear-gradient(90deg,rgba(203, 134, 96, 1) 0%, rgba(196, 121, 79, 1) 100%);
+    color: #FFFFFF;
+    float: right;
+    box-shadow: 0px 15px 25px lightgray;
+}
+
+button:disabled {
+    background: #9F9F9F !important;
+}
+
+div {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-group {
+    height: 200px;
+    cursor: pointer;
+    color: gray;
+    margin-bottom: 60px;
+}
+
+.group-btn-left {
+    border-radius: 40px 0 0 40px;
+    border-right: none !important;
+
+}
+
+.group-btn-right {
+    border-left: none !important;
+    border-radius: 0 40px 40px 0;
+}
+
+.group-btn {
+    border: 0.1em solid #C98864;
+    width: 49%;
+    float: left;
+    height: 100%;
+    font-size: 1.1em;
+}
+
+.group-btn p {
+    padding-left: 30px;
+    padding-right: 35px;
+}
+
+h1 {
+    font-size: 3.2em;
+}
+
+a {
+    color: #9F9F9F;
+    text-decoration: none;
+}
+
+.btn-amount {
+    font-size: 1.1em;
+    padding: 13px;
+    margin-right: 7px;
+    border: 0.1em solid #DFDFDF;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.btn-amount input {
+    border: none;
+    border-bottom: 1px solid #DFDFDF;
+    width: 50px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.selected {
+    background: linear-gradient(90deg,rgba(204, 136, 97, 1) 0%, rgba(196, 121, 79, 1) 100%);
+    border-color: #CD8B65;
+    color: white;
+}
+
+.selected input {
+    background: linear-gradient(90deg,rgba(204, 136, 97, 1) 0%, rgba(196, 121, 79, 1) 100%);
+    border-color: white;
+    color: white;
+}
+
+.btn-group .selected {
+    background: linear-gradient(180deg,rgba(205, 138, 101, 1) 0%, rgba(188, 107, 62, 1) 100%);
+    color: white;
+    box-shadow: 0px 20px 20px lightgray;
+}
+
+.circle img {
+    margin-top: 6px;
+}
+
+.selected .circle {
+    background-color: rgba($color: #B17655, $alpha: 1);
+}
+
+.circle {
+    border-radius: 300px;
+    width: 80px;
+    text-align: center;
+    margin: 25px;
+    padding: 19px 0;
+    background-color: rgba($color: #D9D8D8, $alpha: 0.8);
+}
+
+.phone-prefix {
+    display: inline;
+    width: 20%;
+}
+
+.phone-prefix-flag {
+    border-radius: 2px;
+    margin-right: 11px;
+}
+
+#phone-number {
+    width: 80%;
+}
+
+#personal-data {
+    accent-color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.not-required {
+    float: right;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-right: 5px;
+}
+
+.element-header {
+    width: 50%;
+    display: inline-block;
+}
