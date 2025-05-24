@@ -35,7 +35,7 @@ export class DonateFormStep1Component {
   }
 
   goToNextStep() {
-    this.contribution.shelterId = Number(this.step1Form.value.shelter);
+    this.contribution.shelterId = this.isShelterSelected() ? Number(this.step1Form.value.shelter) : undefined;
 
     if (this.amountOptionIndex !== -1) {
       this.contribution.value = this.amountOptions.at(this.amountOptionIndex);
@@ -54,5 +54,9 @@ export class DonateFormStep1Component {
 
   selectCustom() {
     this.amountOptionIndex = -1;
+  }
+
+  isShelterSelected() {
+    return this.step1Form.value.shelter !== '';
   }
 }
