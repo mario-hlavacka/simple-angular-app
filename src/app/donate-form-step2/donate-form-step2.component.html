@@ -1,26 +1,26 @@
 <h1>Potrebujeme od Vás zopár informácií</h1>
 <h5>O vás</h5>
 <form [formGroup]="step2Form">
-    <div class="input-field">
-        <label for="first-name">Meno</label>
+    <label for="first-name" class="input-field">
+        <span>Meno</span>
         <input id="first-name" type="text" placeholder="Zadajte Vaše meno" formControlName="firstName" maxlength="30">
-    </div>
-    <div class="input-field">
-        <label for="last-name">Priezvisko</label>
+    </label>
+    <label for="last-name" class="input-field">
+        <span>Priezvisko</span>
         <input id="last-name" type="text" placeholder="Zadajte Vaše priezvisko" formControlName="lastName" maxlength="30">
-    </div>
-    <div class="input-field">
-        <label for="email-address">E-mailová adresa</label>
+    </label>
+    <label for="email-address" class="input-field">
+        <span>E-mailová adresa</span>
         <input id="email-address" type="text" placeholder="Zadajte Váš e-mail" formControlName="email" maxlength="50">
-    </div>
-    <div class="input-field">
-        <label for="phone-number">Telefónne číslo</label>
+    </label>
+    <label for="phone-number" class="input-field">
+        <span>Telefónne číslo</span><br>
         <div class="phone-prefix">
             <span class="phone-prefix-flag fi fi-sk"></span>
             <span>+421</span>
         </div>
         <input id="phone-number" type="text" formControlName="phone" maxlength="15">
-    </div>
+    </label>
     <div class="buttons">
         <button class="btn-back" type="button" (click)="goToPreviousStep()">Späť</button>
         <button class="btn-continue" type="button" (click)="goToNextStep()" [disabled]="!step2Form.valid">Pokračovať</button>

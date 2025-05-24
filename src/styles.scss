@@ -17,17 +17,21 @@
     border-color: #CD8B65;
 }
 
-.input-field label {
+.input-field {
     display: inline-block;
     position:relative;
     background-color:white;
     font-weight: bold;
-    width: 100%;
 }
 
 .input-field input {
     border:none;
     width: 100%;
+    padding-left: 0;
+}
+
+.input-field:has(input) {
+    cursor: text;
 }
 
 input:focus {
@@ -38,6 +42,7 @@ input:focus {
     border:none;
     background-color: white;
     width: 100%;
+    padding-left: 1px;
 }
 
 .buttons {

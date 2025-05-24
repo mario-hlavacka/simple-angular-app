@@ -14,13 +14,13 @@
 
     <h4 class="element-header">O projekte</h4>
     <p class="not-required">Nepovinné</p>      
-    <div class="input-field">
-        <label for="shelter-select">Útulok</label>
+    <label for="shelter-select" class="input-field">
+        <span>Útulok</span>
         <select name="shelters" id="shelter-select" formControlName="shelter">
             <option value="" disabled selected hidden>Vyberte útulok zo zoznamu</option>
             <option *ngFor="let shelter of sheltersList" [value]="shelter.id">{{ shelter.name }}</option>
         </select>
-    </div>
+    </label>
 
     <h4>Suma, ktorou chcem prispieť</h4>
     <div>
