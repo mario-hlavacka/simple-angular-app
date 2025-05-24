@@ -1,6 +1,6 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
-import { Contribution } from '../contribution';
-import { SheltersService } from '../shelters.service';
+import { Contribution } from '../../services/contribution';
+import { SheltersService } from '../../services/shelters.service';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 

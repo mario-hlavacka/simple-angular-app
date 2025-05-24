@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Contribution } from '../contribution';
+import { Contribution } from '../../services/contribution';
 
 @Component({
   selector: 'app-donate-form-step2',

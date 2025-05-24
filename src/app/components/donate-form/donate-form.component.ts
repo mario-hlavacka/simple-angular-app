@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { DonateFormStep1Component } from "../donate-form-step1/donate-form-step1.component";
 import { DonateFormStep2Component } from '../donate-form-step2/donate-form-step2.component';
 import { DonateFormStep3Component } from '../donate-form-step3/donate-form-step3.component';
-import { ContributionsService } from '../contributions.service';
-import { Contribution } from '../contribution';
+import { ContributionsService } from '../../services/contributions.service';
+import { Contribution } from '../../services/contribution';
 
 @Component({
   selector: 'app-donate-form',

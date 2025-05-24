@@ -1,8 +1,8 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SheltersService } from '../shelters.service';
-import { Shelter } from '../shelter';
-import { Contribution } from '../contribution';
+import { SheltersService } from '../../services/shelters.service';
+import { Shelter } from '../../services/shelter';
+import { Contribution } from '../../services/contribution';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({

@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Contribution } from './contribution';
-import { environment } from '../environments/environment';
-import { ApiRoutes } from './constants/api-routes';
+import { environment } from '../../environments/environment';
+import { ApiRoutes } from '../constants/api-routes';
 import { Observable } from 'rxjs';
 
 @Injectable({
