@@ -18,13 +18,17 @@
         <span>Útulok</span>
         <select name="shelters" id="shelter-select" formControlName="shelter">
             <option value="" disabled selected hidden>Vyberte útulok zo zoznamu</option>
-            <option *ngFor="let shelter of sheltersList" [value]="shelter.id">{{ shelter.name }}</option>
+            @for (shelter of sheltersList; track shelter.id) {
+                <option [value]="shelter.id">{{ shelter.name }}</option>
+            }
         </select>
     </label>
 
     <h4>Suma, ktorou chcem prispieť</h4>
     <div>
-        <button type="button" *ngFor="let amountOption of amountOptions" class="btn-amount" [class.selected]="(amountOptionIndex === amountOptions.indexOf(amountOption))" (click)="selectOption(amountOptions.indexOf(amountOption))">{{ amountOption }} €</button>
+        @for (amountOption of amountOptions; track $index) {
+            <button type="button" class="btn-amount" [class.selected]="(amountOptionIndex === $index)" (click)="selectOption($index)">{{ amountOption }} €</button>
+        }
         <button type="button" class="btn-amount" [class.selected]="(amountOptionIndex === -1)" (click)="selectCustom()">
             <input type="text" formControlName="amountInput" maxlength="5"> €
         </button>
