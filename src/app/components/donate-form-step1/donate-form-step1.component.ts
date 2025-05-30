@@ -12,14 +12,11 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './donate-form-step1.component.scss'
 })
 export class DonateFormStep1Component {
-  @Input() contribution: Contribution = {firstName: 'b2b2'};
+  @Input() contribution!: Contribution;
   @Output() nextStep = new EventEmitter<Contribution>();
   @Output() wholeFoundationContributionSet = new EventEmitter<boolean>();
 
-  step1Form = new FormGroup({
-    amountInput: new FormControl(''),
-    shelter: new FormControl('')
-  });
+  step1Form!: FormGroup;
 
   wholeFoundationContribution = true;
 
@@ -31,6 +28,13 @@ export class DonateFormStep1Component {
   constructor() {
     this.sheltersService.getShelters().subscribe(data => {
       this.sheltersList = data;
+    });
+  }
+
+  ngOnInit() {
+    this.step1Form = new FormGroup({
+      amountInput: new FormControl(''),
+      shelter: new FormControl(!!this.contribution.shelterId ? this.contribution.shelterId : '')
     });
   }
 

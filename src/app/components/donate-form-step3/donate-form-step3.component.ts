@@ -11,8 +11,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './donate-form-step3.component.scss'
 })
 export class DonateFormStep3Component {
-  @Input() contribution: Contribution = {};
-  @Input() wholeFoundationContribution: boolean = true;
+  @Input() contribution!: Contribution;
+  @Input() wholeFoundationContribution!: boolean;
   @Output() previousStep = new EventEmitter<Contribution>();
   @Output() submitForm = new EventEmitter<void>();
 
