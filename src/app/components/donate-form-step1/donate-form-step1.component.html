@@ -1,0 +1,42 @@
+<h1>Vyberte si možnosť, ako chcete pomôcť</h1>
+
+<form [formGroup]="step1Form">
+    <div class="btn-group">
+        <div class="group-btn group-btn-left" [class.selected]="!wholeFoundationContribution" (click)="wholeFoundationContribution = false">
+            <div class="circle"><img src="wallet-icon.svg"></div>
+            <p>Chcem finančne prispieť konkrétnemu útulku</p>
+        </div>
+        <div class="group-btn group-btn-right" [class.selected]="wholeFoundationContribution" (click)="wholeFoundationContribution = true">
+            <div class="circle"><img src="paw-icon.svg"></div>
+            <p>Chcem finančne prispieť celej nadácii</p>
+        </div>
+    </div>
+
+    <h4 class="element-header">O projekte</h4>
+    <p class="not-required">Nepovinné</p>      
+    <label for="shelter-select" class="input-field">
+        <span>Útulok</span>
+        <select name="shelters" id="shelter-select" formControlName="shelter">
+            <option value="" disabled selected hidden>Vyberte útulok zo zoznamu</option>
+            @for (shelter of sheltersList; track shelter.id) {
+                <option [value]="shelter.id">{{ shelter.name }}</option>
+            }
+        </select>
+    </label>
+
+    <h4>Suma, ktorou chcem prispieť</h4>
+    <div>
+        @for (amountOption of amountOptions; track $index) {
+            <button type="button" class="btn-amount" [class.selected]="(amountOptionIndex === $index)" (click)="selectOption($index)">{{ amountOption }} €</button>
+        }
+        <button type="button" class="btn-amount" [class.selected]="(amountOptionIndex === -1)" (click)="selectCustom()">
+            <input type="text" formControlName="amountInput" maxlength="5"> €
+        </button>
+    </div>
+
+    <div class="buttons">
+        <button class="btn-continue" type="button" (click)="goToNextStep()">Pokračovať</button>
+    </div>
+</form>
+
+

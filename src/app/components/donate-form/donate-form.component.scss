@@ -1,0 +1,57 @@
+@property --gradientColor1 {
+  syntax: '<color>';
+  initial-value: #DCDCDC;
+  inherits: false;
+}
+
+@property --gradientColor2 {
+  syntax: '<color>';
+  initial-value: #DCDCDC;
+  inherits: false;
+}
+
+.step-indicator {
+    --gradientColor1: #DCDCDC;
+    --gradientColor2: var(--gradientColor1);
+
+    height: 7px;
+    margin-right: 6px;
+    display: inline-block;
+    border-radius: 5px;
+    width: 25px;
+    background-image: linear-gradient(90deg, var(--gradientColor1) 0%, var(--gradientColor2) 100%);
+    transition: --gradientColor1 .5s, --gradientColor2 .5s, width .5s;
+}
+
+.active {
+    --gradientColor1: rgba(159, 108, 78, 1);
+    --gradientColor2: rgba(202, 137, 99, 1);
+
+    width: 50px;
+}
+
+.donate-element {
+    width: 45%;
+    margin: auto;
+}
+
+.donate-form {
+    width: 52%;
+    display: inline-block;
+}
+
+.donate-image {
+    width: 40%;
+    display: inline-block;
+    float: right;
+}
+
+.donate-image img {
+    float: right
+}
+
+@media (max-width: 1920px) {
+    .donate-element {
+        width: 80%;
+    }
+}

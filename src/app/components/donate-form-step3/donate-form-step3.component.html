@@ -1,0 +1,33 @@
+<h1>Skontrolujte si zadané informácie</h1>
+
+<form [formGroup]="step3Form">
+    <h4>Akou formou chcete pomôcť</h4>
+    <p>{{ wholeFoundationContribution ? 'Chcem finančne prispieť celej nadácii' : 'Chcem finančne prispieť konkrétnemu útulku'}}</p> 
+
+    <h4 *ngIf="!!this.contribution.shelterId">Najviac mi záleží na útulku</h4>
+    <p *ngIf="!!this.contribution.shelterId">{{ preferedShelterName }}</p>
+
+    <h4>Suma, ktorou chcem pomôcť</h4>
+    <p>{{ contribution.value }} €</p>
+
+    <h4>Meno a priezvisko</h4>
+    <p>{{ contribution.firstName }} {{ contribution.lastName }}</p>
+
+    <h4>E-mailová adresa</h4>
+    <p>{{ contribution.email }}</p>
+
+    <h4>Telefónne číslo</h4>
+    <p>{{ contribution.phone }}</p>
+
+    <label class="container">Súhlasím so spracovaním mojich osobných údajov
+        <input type="checkbox" id="personal-data" name="personal-data" formControlName="accepted">
+        <span class="checkmark"></span>
+    </label>
+
+    <div class="buttons">
+        <button class="btn-back" type="button" (click)="goToPreviousStep()">Späť</button>
+        <button class="btn-continue" type="button" (click)="processForm()" [disabled]="!step3Form.valid">Odoslať formulár</button>
+    </div>
+</form>
+
+
